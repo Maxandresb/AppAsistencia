@@ -11,5 +11,9 @@ export class RecoverpassPage implements OnInit {
 
   ngOnInit() {
   }
+  userrec:String;
+  async onSubmit(form){
+    
 
+  }
 }

@@ -1,20 +1,40 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" color="primary">
+  
+    
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      Registrapp
     </ion-title>
+    <ion-button slot="end" fill="clear" routerLink="../login">
+      <ion-icon slot="icon-only" name="Person"  ></ion-icon>
+    </ion-button>
   </ion-toolbar>
+    
+   
+  
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <ion-item class="ion-margin-top">
+    <ion-title class="ion-padding-top" >Asignaturas</ion-title>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item class="ion-padding-top"   detail>
+      
+      <ion-label>
+        <h3>Programacion de aplicaciones moviles</h3>
+        <p>pgy-3131</p>
+        <p>100% asistencia ( 10 de 10 clases)</p>
+      </ion-label>
+    </ion-item>
+    
+  </ion-list>
+  
 </ion-content>
+
+<app-footerprincipal></app-footerprincipal>

@@ -1,9 +1,43 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-headerlog></app-headerlog>
 
 <ion-content>
+  <div class="ion-padding" >
+    <ion-grid fixed class="ion-padding-top">
+      <ion-row>
+        <ion-col size="2"></ion-col>
+        <ion-col size="8" class="ion-padding">
+          <form #LogForm="ngForm" (ngSubmit)="onSubmit(LogForm)" >
+            
+            <ion-item class="ion-padding-top">
+              <ion-label position="floating">Usuario</ion-label>
+              <ion-input type="text" required [(ngModel)]="userlog" name="loguser"></ion-input>
+            </ion-item>
+            <ion-item class="ion-padding-top">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" [(ngModel)]="passlog" required name="logpass" ></ion-input>
+              
+            </ion-item>
+            <ion-text color="primary" routerLink="../recoverpass">
+              <p>¿Olvidaste tu Contraseña?</p>
+            </ion-text>
+            <div class="ion-padding-top">
+              <ion-button  type="submit" expand="block" [disabled]="LogForm.invalid">
+                Iniciar Sesion
+              </ion-button>
+            </div>
+            
+          
+          
+          
+          
+          </form>
+        </ion-col>
+        <ion-col size="2"></ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </div>
 
+  
 </ion-content>
+<app-footerprincipal></app-footerprincipal>
