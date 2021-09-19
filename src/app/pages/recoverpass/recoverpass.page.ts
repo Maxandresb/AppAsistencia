@@ -24,7 +24,7 @@ export class RecoverpassPage implements OnInit {
           usuariolog: this.usuario
         }
       }
-      this.router.navigate(['/home', navextra])
+      this.router.navigate(['/login', navextra])
     }
     else{
       const alert= await this.alertController.create({
