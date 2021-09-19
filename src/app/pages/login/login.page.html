@@ -10,18 +10,18 @@
             
             <ion-item class="ion-padding-top">
               <ion-label position="floating">Usuario</ion-label>
-              <ion-input type="text" required [(ngModel)]="userlog" name="loguser"></ion-input>
+              <ion-input type="text" required [(ngModel)]="usuario.username" name="loguser"></ion-input>
             </ion-item>
             <ion-item class="ion-padding-top">
               <ion-label position="floating">Contraseña</ion-label>
-              <ion-input type="password" [(ngModel)]="passlog" required name="logpass" ></ion-input>
+              <ion-input type="password" [(ngModel)]="usuario.password" required name="logpass" ></ion-input>
               
             </ion-item>
             <ion-text color="primary" routerLink="../recoverpass">
               <p>¿Olvidaste tu Contraseña?</p>
             </ion-text>
             <div class="ion-padding-top">
-              <ion-button  type="submit" expand="block" [disabled]="LogForm.invalid">
+              <ion-button  type="submit" expand="block" >
                 Iniciar Sesion
               </ion-button>
             </div>
