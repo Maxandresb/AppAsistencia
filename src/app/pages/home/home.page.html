@@ -20,7 +20,7 @@
 <ion-content [fullscreen]="true">
   
   <ion-item class="ion-margin-top">
-    <ion-title class="ion-padding-top" >Asignaturas</ion-title>
+    <ion-title class="ion-padding-top" >Asignaturas {{nombreusuario}} </ion-title>
   </ion-item>
 
   <ion-list>
@@ -36,5 +36,14 @@
   </ion-list>
   
 </ion-content>
+<div *ngIf="nombreusuario !==' '"  >
+ <ion-footer >
+  <ion-item>
+    <ion-label>Bienvenido {{nombreusuario}} </ion-label>
+    
+  </ion-item>
+</ion-footer>
+</div>
+
 
 <app-footerprincipal></app-footerprincipal>

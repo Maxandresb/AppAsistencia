@@ -22,14 +22,14 @@ export class LoginPage implements OnInit {
   // passlog:string
 
 
-  async onSubmit(form){
+  async onSubmit(){
     if (this.usuario.username==="wacoldo" && this.usuario.password==="123"){
       let navextra:NavigationExtras={
         state:{
           usuariolog:this.usuario
         }
       }
-      this.router.navigate(['/home',navextra])
+      this.router.navigate(['/home'],navextra)
 
     }
     else{
