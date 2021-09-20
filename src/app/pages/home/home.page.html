@@ -8,7 +8,7 @@
     <ion-title>
       Registrapp
     </ion-title>
-    <ion-button slot="end" fill="clear" routerLink="../login">
+    <ion-button slot="end" fill="clear" >
       <ion-icon slot="icon-only" name="Camera"  ></ion-icon>
     </ion-button>
   </ion-toolbar>
@@ -20,7 +20,7 @@
 <ion-content [fullscreen]="true">
   
   <ion-item class="ion-margin-top">
-    <ion-title class="ion-padding-top" >Asignaturas {{nombreusuario}} </ion-title>
+    <ion-title class="ion-padding-top" >Asignaturas </ion-title>
   </ion-item>
 
   <ion-list>
@@ -36,11 +36,14 @@
   </ion-list>
   
 </ion-content>
-<div *ngIf="nombreusuario !==' '"  >
+<div *ngIf="nombreusuario"  >
  <ion-footer >
   <ion-item>
     <ion-label>Bienvenido {{nombreusuario}} </ion-label>
     
+    <ion-button (click)="Cerrar()" color="dark" fill="outline" size="medium" shape="square">
+      <ion-icon slot="icon-only" name="close" ></ion-icon>
+    </ion-button>
   </ion-item>
 </ion-footer>
 </div>
