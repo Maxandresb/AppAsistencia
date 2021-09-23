@@ -35,7 +35,7 @@
   </ion-list>
 </div>
 </ion-content>
-<div  class="animate__animated animate__zoomIn">
+<div *ngIf="nombreusuario" class="animate__animated animate__zoomIn">
  <ion-footer  >
   <ion-item color="dark">
     <ion-label>Bienvenido {{nombreusuario}} </ion-label>
@@ -48,4 +48,4 @@
 </div>
 
 
-<app-footerprincipal></app-footerprincipal>*ngIf="nombreusuario"
+<app-footerprincipal></app-footerprincipal>
