@@ -1,15 +1,15 @@
-<ion-header [translucent]="true" color="primary">
+<ion-header>
   
-    
+
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button menu="first" color="primary"></ion-menu-button>
     </ion-buttons>
-    <ion-title>
+    <ion-title >
       Registrapp
     </ion-title>
     <ion-button slot="end" fill="clear" >
-      <ion-icon slot="icon-only" name="Camera"  ></ion-icon>
+      <ion-icon slot="icon-only" name="Camera"></ion-icon>
     </ion-button>
   </ion-toolbar>
     
@@ -18,25 +18,24 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+<div class="animate__animated animate__zoomIn">
   <ion-item class="ion-margin-top">
     <ion-title class="ion-padding-top" >Asignaturas </ion-title>
   </ion-item>
 
-  <ion-list>
-    <ion-item class="ion-padding-top"   detail>
-      
+  <ion-list *ngFor="let item of asistencia" >
+    <ion-item detail>      
       <ion-label>
-        <h3>Programacion de aplicaciones moviles</h3>
-        <p>pgy-4121</p>
-        <p>100% asistencia ( 10 de 10 clases)</p>
+        <h2> {{item.asignatura}} </h2>
+        <h4> {{item.codigo}} </h4>
+        <p> {{item.porcentaje}} </p>
       </ion-label>
     </ion-item>
-    
-  </ion-list>
   
+  </ion-list>
+</div>
 </ion-content>
-<div *ngIf="nombreusuario"  >
+<div *ngIf="nombreusuario" class="animate__animated animate__zoomIn">
  <ion-footer >
   <ion-item>
     <ion-label>Bienvenido {{nombreusuario}} </ion-label>
