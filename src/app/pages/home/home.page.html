@@ -1,15 +1,15 @@
 <ion-header>
   
 
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
-      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+      <ion-menu-button menu="first" color="secondary"></ion-menu-button>
     </ion-buttons>
     <ion-title >
       Registrapp
     </ion-title>
     <ion-button slot="end" fill="clear" >
-      <ion-icon slot="icon-only" name="Camera"></ion-icon>
+      <ion-icon slot="icon-only" name="Camera" color="secondary"></ion-icon>
     </ion-button>
   </ion-toolbar>
     
@@ -35,12 +35,12 @@
   </ion-list>
 </div>
 </ion-content>
-<div *ngIf="nombreusuario" class="animate__animated animate__zoomIn">
- <ion-footer >
-  <ion-item>
+<div  class="animate__animated animate__zoomIn">
+ <ion-footer  >
+  <ion-item color="dark">
     <ion-label>Bienvenido {{nombreusuario}} </ion-label>
     
-    <ion-button (click)="Cerrar()" color="dark" fill="outline" size="medium" shape="square">
+    <ion-button (click)="Cerrar()" color="secondary" fill="outline" size="medium" shape="square">
       <ion-icon slot="icon-only" name="close" ></ion-icon>
     </ion-button>
   </ion-item>
@@ -48,4 +48,4 @@
 </div>
 
 
-<app-footerprincipal></app-footerprincipal>
+<app-footerprincipal></app-footerprincipal>*ngIf="nombreusuario"
